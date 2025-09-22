@@ -66,13 +66,13 @@
                 <p class="site-footer__bottom-text">Copyright © 2025 All Rights Reserved.</p>
                 <ul class="list-unstyled site-footer__bottom-links">
                     <li>
-                        <a href="{{ route('about') }}">Terms & Condition</a>
+                        <a href="">Terms & Condition</a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}">Privacy</a>
+                        <a href="">Privacy</a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}">Support</a>
+                        <a href="">Support</a>
                     </li>
                 </ul>
             </div>

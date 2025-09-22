@@ -25,14 +25,14 @@
                             <h2 class="main-slider__title">MAXI YAMAHA</h2>
                             <p class="main-slider__text">By Yamaha</p>
                             <div class="main-slider__btn-box">
-                                <a href="{{ route('about') }}" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
+                                <a href="" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="item main-slider__slide-2">
-                    <div class="main-slider__bg" style="background-image: url({{ asset('assets/images/backgrounds/slider-1-2.jpg') }});">
+                    <div class="main-slider__bg" style="background-image: url({{ asset('assets/images/home-page/x-max.png') }});">
                     </div><!-- /.slider-one__bg -->
                     <div class="main-slider__shape-1"></div>
                     <div class="main-slider__shape-2 float-bob-y">
@@ -47,14 +47,14 @@
                             <h2 class="main-slider__title">Digital Solution <br> Business</h2>
                             <p class="main-slider__text">We're Best Consultant Agency In Market</p>
                             <div class="main-slider__btn-box">
-                                <a href="{{ route('about') }}" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
+                                <a href="" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="item main-slider__slide-3">
-                    <div class="main-slider__bg" style="background-image: url({{ asset('assets/images/backgrounds/slider-1-3.jpg') }});">
+                    <div class="main-slider__bg" style="background-image: url({{ asset('assets/images/home-page/n-max.jpg') }});">
                     </div><!-- /.slider-one__bg -->
                     <div class="main-slider__shape-1"></div>
                     <div class="main-slider__shape-2 float-bob-y">
@@ -69,14 +69,14 @@
                             <h2 class="main-slider__title">Digital Solution <br> Business</h2>
                             <p class="main-slider__text">We're Best Consultant Agency In Market</p>
                             <div class="main-slider__btn-box">
-                                <a href="{{ route('about') }}" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
+                                <a href="" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="item main-slider__slide-3">
-                    <div class="main-slider__bg" style="background-image: url({{ asset('assets/images/backgrounds/slider-1-3.jpg') }});">
+                    <div class="main-slider__bg" style="background-image: url({{ asset('assets/images/home-page/aerox.jpg') }});">
                     </div><!-- /.slider-one__bg -->
                     <div class="main-slider__shape-1"></div>
                     <div class="main-slider__shape-2 float-bob-y">
@@ -91,7 +91,7 @@
                             <h2 class="main-slider__title">Digital Solution <br> Business</h2>
                             <p class="main-slider__text">We're Best Consultant Agency In Market</p>
                             <div class="main-slider__btn-box">
-                                <a href="{{ route('about') }}" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
+                                <a href="" class="thm-btn main-slider__btn">Discover More<span class="fa fa-plus"></span></a>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                                 <span class="icon-project-management"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title"><a href="{{ route('services-details') }}">Manage It Services</a>
+                                <h3 class="feature-one__title"><a href="">Manage It Services</a>
                                 </h3>
                                 <p class="feature-one__text">Complete account of system, and expound the actual</p>
                             </div>
@@ -131,7 +131,7 @@
                                 <span class="icon-supply-chain"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title"><a href="{{ route('services-details') }}">Digital Experience</a>
+                                <h3 class="feature-one__title"><a href="">Digital Experience</a>
                                 </h3>
                                 <p class="feature-one__text">Complete account of system, and expound the actual</p>
                             </div>
@@ -145,7 +145,7 @@
                                 <span class="icon-cyber-security"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title"><a href="{{ route('services-details') }}">Cyber Security</a></h3>
+                                <h3 class="feature-one__title"><a href="">Cyber Security</a></h3>
                                 <p class="feature-one__text">Complete account of system, and expound the actual</p>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                                 <span class="icon-content-management-1"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title"><a href="{{ route('services-details') }}">Deployment Service</a>
+                                <h3 class="feature-one__title"><a href="">Deployment Service</a>
                                 </h3>
                                 <p class="feature-one__text">Complete account of system, and expound the actual</p>
                             </div>
@@ -284,7 +284,7 @@
         <!--Process One End-->
 
         <!--Services One Start-->
-        <section class="services-one" id="services">
+        <!-- <section class="services-one" id="services">
             <div class="container">
                 <div class="section-title text-center">
                     <div class="section-title__tagline-box">
@@ -302,7 +302,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-coding"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Product
+                                <h3 class="services-one__title"><a href="">Product
                                         <br> Development</a></h3>
                             </div>
                         </li>
@@ -311,7 +311,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-cloud-database"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Cloud
+                                <h3 class="services-one__title"><a href="">Cloud
                                         <br> Computing</a></h3>
                             </div>
                         </li>
@@ -320,7 +320,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-ux-design"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">UI/UX
+                                <h3 class="services-one__title"><a href="">UI/UX
                                         <br> Designing</a></h3>
                             </div>
                         </li>
@@ -329,7 +329,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-cyber-security"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Cyber
+                                <h3 class="services-one__title"><a href="">Cyber
                                         <br> Security</a></h3>
                             </div>
                         </li>
@@ -340,7 +340,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-event-management"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Event
+                                <h3 class="services-one__title"><a href="">Event
                                         <br> Processing</a></h3>
                             </div>
                         </li>
@@ -349,7 +349,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-content-management-1"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Content
+                                <h3 class="services-one__title"><a href="">Content
                                         <br> Management</a></h3>
                             </div>
                         </li>
@@ -358,7 +358,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-cyber-security"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Cyber
+                                <h3 class="services-one__title"><a href="">Cyber
                                         <br> Security</a></h3>
                             </div>
                         </li>
@@ -367,14 +367,14 @@
                                 <div class="services-one__icon">
                                     <span class="icon-backup"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="{{ route('services-details') }}">Backup
+                                <h3 class="services-one__title"><a href="">Backup
                                         <br> & Recovery</a></h3>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--Services One End-->
 
         <!--About One Start-->
@@ -428,7 +428,7 @@
                                     <div class="section-title__tagline-icon">
                                         <img src="{{ asset('assets/images/icon/section-title-icon.png') }}" alt="">
                                     </div>
-                                    <p class="section-title__tagline">Event/p>
+                                    <p class="section-title__tagline">Event</p>
                                 </div>
                                 <h2 class="section-title__title">Maxi Yamaha
                             </div>
@@ -464,7 +464,7 @@
                             </div>
                             <div class="about-one__btn-and-contact">
                                 <div class="about-one__btn-box">
-                                    <a href="{{ route('about') }}" class="about-one__btn thm-btn">Join Event<span class="fa fa-plus"></span></a>
+                                    <a href="{{ route('form-data') }}" class="about-one__btn thm-btn">Join Event<span class="fa fa-plus"></span></a>
                                 </div>
                                 <div class="about-one__contact-box">
                                     <div class="about-one__contact-icon">
@@ -500,9 +500,9 @@
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/t-max.jpg') }});">
                                 <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="{{ route('portfolio-details') }}">T-MAX</a></h4>
+                                    <h4 class="portfolio-one__title"><a href="">T-MAX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/project/portfolio-1-1.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/t-max.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -512,9 +512,9 @@
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/x-max.png') }});">
                                 <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="{{ route('portfolio-details') }}">XMAX</a></h4>
+                                    <h4 class="portfolio-one__title"><a href="">XMAX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/project/portfolio-1-2.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/x-max.png') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -522,11 +522,11 @@
                     </li>
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/project/portfolio-1-3.jpg') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/n-max.jpg') }});">
                                 <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="{{ route('portfolio-details') }}">NMAX</a></h4>
+                                    <h4 class="portfolio-one__title"><a href="">NMAX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/project/portfolio-1-3.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/n-max.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -534,11 +534,11 @@
                     </li>
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/project/portfolio-1-4.jpg') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/aerox.jpg') }});">
                                 <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="{{ route('portfolio-details') }}">AEROX</a></h4>
+                                    <h4 class="portfolio-one__title"><a href="">AEROX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/project/portfolio-1-4.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/aerox.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -546,11 +546,11 @@
                     </li>
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/project/portfolio-1-4.jpg') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/lexi.jpg') }});">
                                 <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="{{ route('portfolio-details') }}">LEXI</a></h4>
+                                    <h4 class="portfolio-one__title"><a href="">LEXI</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/project/portfolio-1-4.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/lexi.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -797,7 +797,7 @@
                                     </li>
                                 </ul>
                                 <div class="pricing-one__btn-box">
-                                    <a href="{{ route('contact') }}" class="pricing-one__btn">Get Started Now<span class="icon-back"></span></a>
+                                    <a href="" class="pricing-one__btn">Get Started Now<span class="icon-back"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -837,7 +837,7 @@
                                     </li>
                                 </ul>
                                 <div class="pricing-one__btn-box">
-                                    <a href="{{ route('contact') }}" class="pricing-one__btn">Get Started Now<span class="icon-back"></span></a>
+                                    <a href="" class="pricing-one__btn">Get Started Now<span class="icon-back"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -877,7 +877,7 @@
                                     </li>
                                 </ul>
                                 <div class="pricing-one__btn-box">
-                                    <a href="{{ route('contact') }}" class="pricing-one__btn">Get Started Now<span class="icon-back"></span></a>
+                                    <a href="" class="pricing-one__btn">Get Started Now<span class="icon-back"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -908,7 +908,7 @@
                                 <div class="team-one__img">
                                     <img src="{{ asset('assets/images/team/team-1-1.jpg') }}" alt="">
                                     <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="{{ route('team-details') }}">Jecika Brown</a></h3>
+                                        <h3 class="team-one__name"><a href="">Jecika Brown</a></h3>
                                         <p class="team-one__sub-title">Web Designer</p>
                                     </div>
                                 </div>
@@ -929,7 +929,7 @@
                                 <div class="team-one__img">
                                     <img src="{{ asset('assets/images/team/team-1-2.jpg') }}" alt="">
                                     <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="{{ route('team-details') }}">Jhon Smith</a></h3>
+                                        <h3 class="team-one__name"><a href="">Jhon Smith</a></h3>
                                         <p class="team-one__sub-title">Web Designer</p>
                                     </div>
                                 </div>
@@ -950,7 +950,7 @@
                                 <div class="team-one__img">
                                     <img src="{{ asset('assets/images/team/team-1-3.jpg') }}" alt="">
                                     <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="{{ route('team-details') }}">Alisha Martin</a></h3>
+                                        <h3 class="team-one__name"><a href="">Alisha Martin</a></h3>
                                         <p class="team-one__sub-title">Web Designer</p>
                                     </div>
                                 </div>
@@ -971,7 +971,7 @@
                                 <div class="team-one__img">
                                     <img src="{{ asset('assets/images/team/team-1-4.jpg') }}" alt="">
                                     <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="{{ route('team-details') }}">David Kapor</a></h3>
+                                        <h3 class="team-one__name"><a href="">David Kapor</a></h3>
                                         <p class="team-one__sub-title">Web Designer</p>
                                     </div>
                                 </div>
@@ -1174,12 +1174,12 @@
                                         <p><span class="fa fa-comments"></span>02 Comment</p>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Easy Yo Use our Software New
+                                <h3 class="blog-one__title"><a href="">Easy Yo Use our Software New
                                         Innovation</a></h3>
                                 <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
                                 </p>
                                 <div class="blog-one__btn">
-                                    <a href="{{ route('blog-details') }}">Read more<span class="icon-right-arrow1"></span></a>
+                                    <a href="">Read more<span class="icon-right-arrow1"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -1206,12 +1206,12 @@
                                         <p><span class="fa fa-comments"></span>02 Comment</p>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Ipsum is simply is text used by
+                                <h3 class="blog-one__title"><a href="">Ipsum is simply is text used by
                                         copytyping</a></h3>
                                 <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
                                 </p>
                                 <div class="blog-one__btn">
-                                    <a href="{{ route('blog-details') }}">Read more<span class="icon-right-arrow1"></span></a>
+                                    <a href="">Read more<span class="icon-right-arrow1"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -1238,12 +1238,12 @@
                                         <p><span class="fa fa-comments"></span>02 Comment</p>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Simply is text used by
+                                <h3 class="blog-one__title"><a href="">Simply is text used by
                                         copytyping refreshing.</a></h3>
                                 <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
                                 </p>
                                 <div class="blog-one__btn">
-                                    <a href="{{ route('blog-details') }}">Read more<span class="icon-right-arrow1"></span></a>
+                                    <a href="">Read more<span class="icon-right-arrow1"></span></a>
                                 </div>
                             </div>
                         </div>

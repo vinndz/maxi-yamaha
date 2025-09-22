@@ -10,23 +10,9 @@
                         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                         <ul class="main-menu__list one-page-scroll-menu">
                             <li class="scrollToLink">
-                                <a href="#home">Home </a>
+                                <a href="{{ route('index-one-page') }}">Home </a>
                             </li>
-                            <li class="scrollToLink">
-                                <a href="#about">About</a>
-                            </li>
-                            <li class="scrollToLink">
-                                <a href="#services">Services</a>
-                            </li>
-                            <li class="scrollToLink">
-                                <a href="#pricing">Pricing</a>
-                            </li>
-                            <li class="scrollToLink">
-                                <a href="#team">Team</a>
-                            </li>
-                            <li class="scrollToLink">
-                                <a href="#blog">Blog</a>
-                            </li>
+
                         </ul>
                     </div>
 
