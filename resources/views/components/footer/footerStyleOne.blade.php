@@ -1,33 +1,16 @@
 <!--Newsletter One Start-->
 <section class="newsletter-one">
     <div class="container">
-        <div class="newsletter-one__inner">
-            <div class="newsletter-one__bg float-bob-y"
-                style="background-image: url({{ asset('assets/images/backgrounds/newsletter-one-bg.jpg') }});"></div>
-            <h3 class="newsletter-one__title">Newsletter</h3>
-            <p class="newsletter-one__sub-title">Stay updated</p>
-            <form action="assets/inc/sendemail.php" class="contact-form-validated" novalidate="novalidate">
-                <div class="newsletter-one__form">
-                    <input type="email" name="email" placeholder="Email address">
-                    <button type="submit" class="newsletter-one__btn">
-                        <span>
-                            Subscribe
-                            <i class="icon-arrow"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="result mt-2"></div>
-            </form>
-        </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8943174593132!2d106.71673227499086!3d-6.277623193711227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb2b2ccb23a5%3A0x926ebc155da9bfdc!2sTranspark%20Mall%20Bintaro!5e0!3m2!1sid!2sid!4v1758524446983!5m2!1sid!2sid"
+                class="google-map__one" allowfullscreen>
+            </iframe>
     </div>
 </section>
 <!--Newsletter One End-->
 
-
 <!--Site Footer Start-->
 <footer class="site-footer">
-    <div class="site-footer__bg-2"
-        style="background-image: url({{ asset('assets/images/backgrounds/site-footer-bg-2.jpg') }});"></div>
     <div class="site-footer__bg-3 float-bob-y"
         style="background-image: url({{ asset('assets/images/backgrounds/site-footer-bg-3.png') }});"></div>
     <div class="site-footer__bg"
@@ -44,9 +27,9 @@
                         </div>
                         <ul class="footer-widget__contact-list list-unstyled">
                             <li>
-                                <p>45 Broklyn Street, 78 New York</p>
+                                <p>Yamaha Indonesia Motor Manufaturing</p>
                             </li>
-                            <li><a href="mailto:zeena@gmail.com">zeena@gmail.com</a></li>
+                            <li><a href="mailto:zeena@gmail.com">yamaha@gmail.com</a></li>
                             <li><a href="tel:7778880000">777 888 0000</a></li>
                         </ul>
                         <div class="footer-widget__social">

@@ -24,7 +24,7 @@
   --zeena-gray-rgb: 135, 140, 143;
   --zeena-white: #ffffff;
   --zeena-white-rgb: 255, 255, 255;
-  --zeena-base: #ea1b29;
+  --zeena-base:#A7791E;
   --zeena-base-rgb: 234, 27, 41;
   --zeena-black: #1b1825;
   --zeena-black-rgb: 27, 24, 37;
@@ -2212,9 +2212,9 @@ ul {
 }
 
 .main-slider__shape-1 {
-  background-image: -moz-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(144, 81, 55) 57%, rgb(254, 127, 76) 100%);
-  background-image: -webkit-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(144, 81, 55) 57%, rgb(254, 127, 76) 100%);
-  background-image: -ms-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(144, 81, 55) 57%, rgb(254, 127, 76) 100%);
+  /* background-image: -moz-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(161, 126, 110) 57%, rgb(138, 159, 4) 100%);
+  background-image: -webkit-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(250, 213, 197) 57%, rgb(138, 159, 4) 100%);
+  background-image: -ms-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(255, 227, 214) 57%, rgb(138, 159, 4) 100%); */
   position: absolute;
   left: 0px;
   top: 120px;

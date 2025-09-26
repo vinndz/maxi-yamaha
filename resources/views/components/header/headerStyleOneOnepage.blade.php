@@ -16,27 +16,24 @@
                                 <a href="#about">About</a>
                             </li>
                             <li class="scrollToLink">
-                                <a href="#services">Services</a>
+                                <a href="#join-event">Join Event</a>
                             </li>
                             <li class="scrollToLink">
-                                <a href="#pricing">Pricing</a>
+                                <a href="#type">Type</a>
                             </li>
                             <li class="scrollToLink">
-                                <a href="#team">Team</a>
-                            </li>
-                            <li class="scrollToLink">
-                                <a href="#blog">Blog</a>
+                                <a href="#last-event">Last Event</a>
                             </li>
                         </ul>
                     </div>
 
                 </div>
                 <div class="main-menu__right">
-                    <div class="main-menu__btn-box">
+                    <!-- <div class="main-menu__btn-box">
                         <a href="" class="main-menu__btn">Login<i class="fa-solid fa-right-to-bracket"></i>
 
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

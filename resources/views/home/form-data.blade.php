@@ -7,10 +7,25 @@
     <title>Maxi Yamaha - Form Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
+    {{-- Form --}}
 
+    {{-- Alert --}}
+    @if(session('success'))
+        <script>
+        Swal.fire({
+            title: "Success",
+            text: "{{ session('success') }}",
+            icon: "success",
+            confirmButtonText: "OK"
+        }).then(() => {
+            window.location.href = "{{ route('index-one-page') }}";
+        });
+        </script>
+    @endif
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
         <div class="container">
@@ -21,25 +36,57 @@
         </div>
     </nav>
 
-    <!-- Background Hero -->
-    <!-- <header class="bg-dark text-white text-center py-5" style="background: url('https://picsum.photos/1600/400') center/cover no-repeat;"> -->
     <header class="bg-dark text-white text-center d-flex align-items-center justify-content-center"
         style="background: url('{{ asset('assets/images/home-page/n-max.jpg') }}') center/cover no-repeat;
                min-height: 400px;">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Form Data</h1>
-        <p class="lead">Isi data Anda untuk bergabung bersama komunitas Maxi Yamaha</p>
-    </div>
-</header>
+        <div class="container">
+            <h1 class="display-4 fw-bold">Form Data</h1>
+            <p class="lead">Isi data Anda untuk bergabung bersama komunitas Maxi Yamaha</p>
+        </div>
+    </header>
 
 
     <!-- Form -->
     <section class="py-5">
         <div class="container">
             <div class="card shadow-lg rounded-4 p-4">
-                <form method="POST" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('form-data.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row g-3">
+
+                    <!-- dropdown select -->
+                    <div class="mt-4">
+                        <label for="type" class="form-label fw-bold">Type Category</label>
+                        <select id="type" name="type" class="form-select" required>
+                            <option value="" selected disabled>Choose Category</option>
+                            <option value="STREET MAXI">Street Maxi</option>
+                            <option value="SUPER MAXI">Super Maxi</option>
+                        </select>
+                    </div>
+
+                    <!-- dropdown select -->
+                    <div class="mt-4">
+                        <label for="type" class="form-label fw-bold">Type Motorcycle</label>
+                        <select id="type" name="type" class="form-select" required>
+                            <option value="" selected disabled>Choose Motorcycle</option>
+                            <option value="X-MAX">X-MAX</option>
+                            <option value="N-MAX">N-MAX</option>
+                            <option value="AEROX">AEROX</option>
+                            <option value="LEXI">LEXI</option>
+                        </select>
+                    </div>
+
+                    <!-- dropdown select -->
+                    <div class="mt-4">
+                        <label for="type" class="form-label fw-bold">Modification Range Cost (Estimation)</label>
+                        <select id="type" name="type" class="form-select" required>
+                            <option value="" selected disabled>Modification Range Cost</option>
+                            <option value="under5jt">< 5.000.000</option>
+                            <option value="5-10">5.000.001 - 10.000.000</option>
+                            <option value="10-20">10.000.001 - 20.000.000</option>
+                            <option value="lebih20jt">>20.000.000</option>
+                        </select>
+                    </div>
                         <!-- Name -->
                         <div class="col-md-6">
                             <label for="name" class="form-label fw-bold">Full Name</label>
@@ -63,7 +110,15 @@
                             <label for="instagram" class="form-label fw-bold">Instagram</label>
                             <input type="text" id="instagram" name="instagram" class="form-control" placeholder="@username">
                         </div>
+
+                        <!-- link posting registrasi -->
+                        <div class="mt-4">
+                            <label for="link" class="form-label fw-bold">Link Posting Registrasi</label>
+                            <input type="text" id="link" name="link" class="form-control" placeholder="Enter link posting registrasi">
+                        </div>
                     </div>
+
+                    
 
                     <!-- Upload Image -->
                     <div class="mt-4">
@@ -81,6 +136,8 @@
                         </div>
                     </div>
 
+                    
+
                     <!-- Button -->
                     <div class="mt-4 text-center">
                         <button type="submit" class="btn btn-primary btn-lg rounded-4 px-5 shadow">Send Data</button>
@@ -95,45 +152,48 @@
         <p class="mb-0">&copy; 2025 Maxi Yamaha. All rights reserved.</p>
     </footer>
 
-    <!-- Script -->
-    <script>
-        const dropArea = document.getElementById('drop-area');
-        const fileInput = document.getElementById('image');
-        const preview = document.getElementById('preview');
-
-        // Drag highlight
-        dropArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropArea.classList.add('bg-white');
-        });
-        dropArea.addEventListener('dragleave', () => {
-            dropArea.classList.remove('bg-white');
-        });
-
-        // Drop file
-        dropArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            fileInput.files = e.dataTransfer.files;
-            previewFile(fileInput.files[0]);
-        });
-
-        // Change file input
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files.length > 0) {
-                previewFile(fileInput.files[0]);
-            }
-        });
-
-        function previewFile(file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    </script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@include('sweetalert::alert')
 </body>
 
 </html>
+
+
+<!-- Script -->
+<script>
+    const dropArea = document.getElementById('drop-area');
+    const fileInput = document.getElementById('image');
+    const preview = document.getElementById('preview');
+
+    // Drag highlight
+    dropArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropArea.classList.add('bg-white');
+    });
+    dropArea.addEventListener('dragleave', () => {
+        dropArea.classList.remove('bg-white');
+    });
+
+    // Drop file
+    dropArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        fileInput.files = e.dataTransfer.files;
+        previewFile(fileInput.files[0]);
+    });
+
+    // Change file input
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            previewFile(fileInput.files[0]);
+        }
+    });
+
+    function previewFile(file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+</script>

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('instagram');
+            $table->string('type');
             $table->string('image');
             $table->timestamps();
         });
