@@ -57,7 +57,7 @@
                     <!-- dropdown select -->
                     <div class="mt-4">
                         <label for="type" class="form-label fw-bold">Type Category</label>
-                        <select id="type" name="type" class="form-select" required>
+                        <select id="category" name="category" class="form-select" required>
                             <option value="" selected disabled>Choose Category</option>
                             <option value="STREET MAXI">Street Maxi</option>
                             <option value="SUPER MAXI">Super Maxi</option>
@@ -67,7 +67,7 @@
                     <!-- dropdown select -->
                     <div class="mt-4">
                         <label for="type" class="form-label fw-bold">Type Motorcycle</label>
-                        <select id="type" name="type" class="form-select" required>
+                        <select id="type_motorcycle" name="type_motorcycle" class="form-select" required>
                             <option value="" selected disabled>Choose Motorcycle</option>
                             <option value="X-MAX">X-MAX</option>
                             <option value="N-MAX">N-MAX</option>
@@ -79,12 +79,12 @@
                     <!-- dropdown select -->
                     <div class="mt-4">
                         <label for="type" class="form-label fw-bold">Modification Range Cost (Estimation)</label>
-                        <select id="type" name="type" class="form-select" required>
+                        <select id="cost_estimation" name="cost_estimation" class="form-select" required>
                             <option value="" selected disabled>Modification Range Cost</option>
-                            <option value="under5jt">< 5.000.000</option>
-                            <option value="5-10">5.000.001 - 10.000.000</option>
-                            <option value="10-20">10.000.001 - 20.000.000</option>
-                            <option value="lebih20jt">>20.000.000</option>
+                            <option value="< 5.000.000">< 5.000.000</option>
+                            <option value="5.000.001 - 10.000.000">5.000.001 - 10.000.000</option>
+                            <option value="10.000.001 - 20.000.000">10.000.001 - 20.000.000</option>
+                            <option value=">20.000.000">>20.000.000</option>
                         </select>
                     </div>
                         <!-- Name -->
@@ -113,7 +113,7 @@
 
                         <!-- link posting registrasi -->
                         <div class="mt-4">
-                            <label for="link" class="form-label fw-bold">Link Posting Registrasi</label>
+                            <label for="link" class="form-label fw-bold">Link Posting Instagram</label>
                             <input type="text" id="link" name="link" class="form-control" placeholder="Enter link posting registrasi">
                         </div>
                     </div>
@@ -135,8 +135,6 @@
                             <img id="preview" src="" class="img-fluid rounded-4 shadow" style="max-height: 250px; display:none;" />
                         </div>
                     </div>
-
-                    
 
                     <!-- Button -->
                     <div class="mt-4 text-center">

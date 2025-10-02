@@ -1,9 +1,153 @@
 @extends('layouts.layoutStyleOneOnepage')
 @section('title', 'MAXI YAMAHA')
+<link rel="stylesheet" href="assets/fonts/flaticon.css">
 
 
 @section('content')
 <!-- /.stricky-header -->
+ <style>
+
+    /* Awards List - jadi 2 kolom */
+    .awards-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    }
+
+    .awards-list li {
+    flex: 0 0 50%; /* 2 kolom */
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    }
+
+    .awards-list li::before {
+    content: "•";
+    margin-right: 8px;
+    color: #ffc107;
+    font-weight: bold;
+    }
+
+    /* Competition Category */
+    .competition-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+    }
+
+    .competition-title h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    }
+
+    .competition-columns {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 30px;
+    }
+
+    .competition-col {
+    flex: 1;
+    }
+
+    .competition-col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    }
+
+    .competition-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .competition-col li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    }
+
+    .competition-col li::before {
+    content: "•";
+    margin-right: 8px;
+    color: #ffc107;
+    font-weight: bold;
+    }
+
+    .section-title__tagline2-box {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* ini biar icon + teks di tengah */
+        gap: 10px; /* kasih jarak antara icon dan teks */
+    }
+
+    .section-title__tagline2 {
+        margin: 0;
+        text-align: center;
+    }
+
+    #about {
+        margin-top: -100px; /* default terlalu besar, bisa diganti */
+    }
+
+
+
+    .process-one__process-list {
+        display: flex;
+        justify-content: center; /* semua item rata tengah */
+        align-items: stretch;
+        gap: 30px; /* jarak antar kotak */
+        flex-wrap: wrap; /* biar responsif */
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .process-one__process-list li {
+        list-style: none;
+    }
+
+    .process-one__single {
+        width: 220px;   /* lebar seragam */
+        min-height: 280px; /* tinggi seragam */
+        background: #fff;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .process-one__process-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 kolom sejajar */
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .process-one__single {
+        width: 220px;
+        min-height: 280px;
+        background: #fff;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+ </style>
 
         <!-- Main Sllider Start -->
         <section class="main-slider" id="home">
@@ -31,116 +175,119 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section><br><br>
         <!--Main Sllider Start -->
-
-        <!--Benefits One Start-->
-        <section class="benefits-one" id="about">
-            <div class="benefits-one__shape-1">
-                <div class="benefits-one__shape-bg" style="background-image: url({{ asset('assets/images/backgrounds/benefits-one-shape-bg.png') }});"></div>
+        <div class="section-title text-center mt-4">
+            <div class="section-title__tagline2-box">
+                <div class="section-title__tagline2-icon">
+                    <img src="{{ asset('assets/images/icon/section-title-icon.png') }}" alt="">
+                </div>
+                <p class="section-title__tagline text-center">Competition and Awarding Categories</p>
             </div>
+        </div>
+
+        <section class="benefits-one mb-4" id="about">
+            
+           
             <div class="benefits-one__bg-one" style="background-image: url({{ asset('assets/images/backgrounds/benefits-one-bg-one.jpg') }});"></div>
-            <div class="benefits-one__overly"></div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5">
-                        <div class="benefits-one__left">
-                            <!-- <h1>MAXI YAMAHA</h1>
-                            <p>TEST</p> -->
-                            <div class="benefits-one__img wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                <img src="{{ asset('assets/images/home-page/award.png') }}" alt="">
-                            </div>
+                    <div class="benefits-one__left">
+                        <div class="benefits-one__img wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                            <img src="{{ asset('assets/images/home-page/award.png') }}" alt="">
                         </div>
+                        <!-- <div>
+                            <h1 class=" nowrap" style="margin-top: 20px;">Competition Category</h1><br>
+                        </div>
+
+                        <div>
+                            <h4>STREET MAXI</h4>
+                            <ul>
+                                <li>XMAX</li>
+                                <li>NMAX</li>
+                                <li>AEROX</li>
+                                <li>LEXI</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>STREET MAXI</h4>
+                            <ul>
+                                <li>XMAX</li>
+                                <li>NMAX</li>
+                                <li>AEROX</li>
+                                <li>LEXI</li>
+                            </ul>
+                        </div> -->
+
                     </div>
-                    <div class="col-xl-7">
-                        <div class="benefits-one__right">
-                            <div class="section-title text-left">
-                                <div class="section-title__tagline-box">
-                                    <div class="section-title__tagline-icon">
-                                        <img src="{{ asset('assets/images/icon/section-title-icon.png') }}" alt="">
-                                    </div>
-                                    <p class="section-title__tagline">Competition and Awarding Catgories</p>
+                </div>
+                <div class="col-xl-7">  
+                    <div class="benefits-one__right">
+                        <div class="section-title text-left">
+                            <h6 class="section-title__title">Awarding Categories</h6>
+                        </div>
+
+                        <!-- Awards List -->
+                        <div class="awards-list">
+                            <ul>
+                                <li>Most Favorite Modification</li>
+                                <li>Most Prestigious/Elegant MAXi</li>
+                                <li>Most Extraordinary "Hedoon" Style</li>
+                                <li>Most Shocking MAXi</li>
+                                <li>Best Video Content Creator</li>
+                                <li>Best Cinematic Post</li>
+                                <li>Best Modification Innovation</li>
+                                <li>Best Decal/Sticker</li>
+                                <li>Best Thematic Realistic Airbrush Work</li>
+                                <li>Best Thematic Graphic Airbrush Work</li>
+                                <li>Best Racing Performance Styling</li>
+                                <li>Best MAXi Touring Wanderluster</li>
+                                <li>The Coolest Thailook</li>
+                                <li>The Coolest Vietnam Look</li>
+                                <li>Fun & Proper Sunmori Style</li>
+                            </ul>
+                        </div>
+
+                        <!-- Competition Category -->
+                        <div class="competition-container">
+                            <!-- Judul kiri -->
+                            <div class="competition-title">
+                                <h3>Competition Categories</h3>
+                            </div>
+
+                            <!-- Kolom kanan -->
+                            <div class="competition-columns">
+                                <div class="competition-col">
+                                    <h4>STREET MAXI</h4>
+                                    <ul>
+                                        <li>XMAX</li>
+                                        <li>NMAX</li>
+                                        <li>AEROX</li>
+                                        <li>LEXI</li>
+                                    </ul>
                                 </div>
-                                <h2 class="section-title__title">MAXI YAMAHA</h2>
-                            </div>
-                            <div class="benefits-one__points-and-mission">
-                                <ul class="benefits-one__points list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Most Favorite Modification</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Most Prestigious/Elegant MAXi</p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Most Extraordinary "Hedoon" Style</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Most Shocking MAXi</p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Best Video Content Creator</p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Best Cinematic Post</p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Best Modication Innovation</p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Best Decal/Sticker</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <div class="competition-col">
+                                    <h4>SUPER MAXI</h4>
+                                    <ul>
+                                        <li>XMAX</li>
+                                        <li>NMAX</li>
+                                        <li>AEROX</li>
+                                        <li>LEXI</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+
                     </div>
+                </div>
+
                 </div>
             </div>
         </section>
+        
         <!--Benefits One End-->
 
         <!--Process One Start-->
@@ -154,7 +301,7 @@
                         <li class="wow fadeInUp" data-wow-delay="100ms">
                             <div class="process-one__single">
                                 <div class="process-one__icon">
-                                    <span class="icon-zoom-in"></span>
+                                    <span class="icon-download"></span>
                                 </div>
                                 <!-- link download rules competition -->
                                 <p class="process-one__text">Download Rules Compettion</p>
@@ -162,31 +309,36 @@
                                 <div class="process-one__count"></div>
                             </div>
                         </li>
-                        <li class="wow fadeInUp" data-wow-delay="200ms">
+                        <li class="wow fadeInUp" data-wow-delay="100ms">
                             <div class="process-one__single">
                                 <div class="process-one__icon">
-                                    <span class="icon-test"></span>
+                                    <span class="flaticon-upload"></span>
                                 </div>
+                                <!-- Posting IG With Twibbon -->
                                 <p class="process-one__text">Posting IG With Twibbon</p>
                                 <a href="">click here</a>
                                 <div class="process-one__count"></div>
                             </div>
                         </li>
-                        <li class="wow fadeInUp" data-wow-delay="300ms">
+                        <li class="wow fadeInUp" data-wow-delay="100ms">
                             <div class="process-one__single">
                                 <div class="process-one__icon">
-                                    <span class="icon-self-development"></span>
+                                    <span class="icon-download"></span>
                                 </div>
+                                <!-- Registration at website -->
                                 <p class="process-one__text">Registration at Wesite</p>
+                                <a href="">click here</a>
                                 <div class="process-one__count"></div>
                             </div>
                         </li>
-                        <li class="wow fadeInUp" data-wow-delay="400ms">
+                        <li class="wow fadeInUp" data-wow-delay="100ms">
                             <div class="process-one__single">
                                 <div class="process-one__icon">
-                                    <span class="icon-growth"></span>
+                                    <span class="icon-download"></span>
                                 </div>
+                                <!-- Finish -->
                                 <p class="process-one__text">Finish</p>
+                                <a href="">click here</a>
                                 <div class="process-one__count"></div>
                             </div>
                         </li>
@@ -203,46 +355,8 @@
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="about-one__left">
-                            <!-- <div class="about-one__img wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                <br><br><br>
-                                <img src="{{ asset('assets/images/home-page/logo-maxi.png') }}" alt="">
-                                <div class="about-one__img-box">
-                                    <div class="about-one__img-2 relative">
-                                         
-                                        <img src="{{ asset('assets/images/home-page/maxi_yamaha.jpg') }}" alt="Maxi Yamaha" class="w-full h-auto">
-                                
-                                        <div class="about-one__video-link absolute inset-0 flex items-center justify-center">
-                                            <a href="https://www.youtube.com/watch?v=o-pP_t6sOZY"
-                                            class="video-popup"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label="Play Instagram Video">
-                                                <div class="about-one__video-icon">
-                                                    <i class="fa fa-play" aria-hidden="true"></i>
-                                                    <span class="ripple"></span>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="about-one__shape-1"></div>
-                                    </div>
-                                </div>
-
-                                <div class="about-one__project-complete">
-                                    <div class="about-one__count count-box">
-                                        <h3 class="count-text" data-stop="100" data-speed="1500">00</h3>
-                                        <span> </span>
-                                    </div>
-                                    <p class="about-one__count-text">Project
-                                        <br> Complete</p>
-                                </div>
-                            </div> -->
-
                             <div class="container">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8943174593132!2d106.71673227499086!3d-6.277623193711227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb2b2ccb23a5%3A0x926ebc155da9bfdc!2sTranspark%20Mall%20Bintaro!5e0!3m2!1sid!2sid!4v1758524446983!5m2!1sid!2sid"
-                                        class="google-map__one" allowfullscreen style="width: 500px; height: 500px;">
-                                    </iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.843336069047!2d106.6342165751506!3d-6.284315061512895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb4030859dfb%3A0xbc8402640a0b831d!2sQBIG%20BSD%20City!5e0!3m2!1sid!2sid!4v1759292923930!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -278,7 +392,7 @@
                             </ul>
                             <div class="about-one__it-solution">
                                 <p class="about-one__text">
-                                    Location : Transpark Mall Bintaro
+                                    Location : QBIG BSD City
                                     <br>
                                     Date : 11 Oktober 2025
                                     <br>
@@ -286,9 +400,10 @@
 
                                 </p>
                                 <div class="about-one__btn-and-contact" style="margin-left: 80px;">
-                                    <!-- <div class="about-one__btn-box">
+                                    <div class="about-one__btn-box">
                                         <a href="{{ route('form-data') }}" class="about-one__btn thm-btn">Join Event<span class="fa fa-plus"></span></a>
-                                    </div> -->
+                                    </div>
+                                </div>
                             </div>
                                 <div class="about-one__it-solution-img">
                                     <img src="{{ asset('assets/images/resources/about-one-it-solution-img.jpg') }}" alt="">
@@ -296,11 +411,6 @@
                                 <div class="about-one__it-solution-content">
                                 </div>
                             </div>
-                            <!-- <div class="about-one__btn-and-contact">
-                                <div class="about-one__btn-box">
-                                    <a href="{{ route('form-data') }}" class="about-one__btn thm-btn">Join Event<span class="fa fa-plus"></span></a>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -310,37 +420,25 @@
 
         <br><br><br>
         <!--Portfolio One STart-->
-        <section class="portfolio-one" id="type">
+        <section class="portfolio-one" style="margin-top: -200px;" id="type" >
             <div class="container">
                 <div class="section-title text-center">
                     <div class="section-title__tagline-box">
                         <div class="section-title__tagline-icon">
                             <img src="{{ asset('assets/images/icon/section-title-icon.png') }}" alt="">
                         </div>
-                        <p class="section-title__tagline">MAXI YAMAHA</p>
+                        <p class="section-title__tagline">MAXi YAMAHA</p>
                     </div>
-                    <h2 class="section-title__title">OUR MAXI YAMAHA TYPE</h2>
+                    <h2 class="section-title__title">CUSTOM MAXi</h2>
                 </div>
                 <ul class="list-unstyled portfolio-one__list">
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/t-max.jpg') }});">
-                                <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="">T-MAX</a></h4>
-                                    <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/home-page/t-max.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/x-max.png') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/img2.jpg') }});">
                                 <div class="portfolio-one__title-box">
                                     <h4 class="portfolio-one__title"><a href="">XMAX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/home-page/x-max.png') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/img2.jpg') }}" class="img-popup" width="100%" height="100%"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -348,11 +446,11 @@
                     </li>
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/n-max.jpg') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/img3.jpg') }});">
                                 <div class="portfolio-one__title-box">
                                     <h4 class="portfolio-one__title"><a href="">NMAX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/home-page/n-max.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/img3.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -360,23 +458,25 @@
                     </li>
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/aerox.jpg') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/img1.jpg') }});">
                                 <div class="portfolio-one__title-box">
                                     <h4 class="portfolio-one__title"><a href="">AEROX</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/home-page/aerox.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/img1.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    
+                    
                     <li>
                         <div class="portfolio-one__single">
-                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/lexi.jpg') }});">
+                            <div class="portfolio-one__img" style="background-image:url({{ asset('assets/images/home-page/img4.jpg') }});">
                                 <div class="portfolio-one__title-box">
                                     <h4 class="portfolio-one__title"><a href="">LEXI</a></h4>
                                     <div class="portfolio-one__arrow">
-                                        <a href="{{ asset('assets/images/home-page/lexi.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
+                                        <a href="{{ asset('assets/images/home-page/img4.jpg') }}" class="img-popup"><span class="icon-right-arrow1"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -387,98 +487,6 @@
         </section>
         <!--Portfolio One End-->
 
-        <!--Team One Start-->
-        <!-- <section class="team-one" id="last-event" style="margin-bottom:10px;">
-            <div class="container">
-                <div class="section-title text-center">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-icon">
-                            <img src="{{ asset('assets/images/icon/section-title-icon.png') }}" alt="">
-                        </div>
-                        <p class="section-title__tagline">Last Event</p>
-                    </div>
-                    <h2 class="section-title__title">Last Event Maxi Yamaha</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{ asset('assets/images/team/team-1-1.jpg') }}" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="">Jecika Brown</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{ asset('assets/images/team/team-1-2.jpg') }}" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="">Jhon Smith</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{ asset('assets/images/team/team-1-3.jpg') }}" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="">Alisha Martin</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{ asset('assets/images/team/team-1-4.jpg') }}" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="">David Kapor</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <!--Team One End-->
         @include('sweetalert::alert')
     <x-footer.footerStyleOne />

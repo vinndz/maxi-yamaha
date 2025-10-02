@@ -13,25 +13,44 @@ class LoginController extends Controller
         return view('login');
     }
 
+    // public function login(Request $request)
+    // {
+
+    //     $username = $request->input('username');
+    //     $password = $request->input('password');
+
+    //     // Cek hardcode admin
+    //     if ($username === 'admin' && $password === 'admin') {
+    //         return redirect()->route('dashboard-admin')->with('success', 'Login successfully as Admin!');
+    //     }
+
+    //     // Cari user di database
+    //     $user = User::where('username', $username)->first();
+
+    //     if ($user && Hash::check($password, $user->password)) {
+    //         // Login manual
+    //         Auth::login($user);
+    //         return redirect()->route('dashboard-admin')->with('success', 'Login successfully!');
+    //     }
+
+    //     return redirect()->route('login')->with('error', 'Username or Password Incorrect!');
+    // }
+
     public function login(Request $request)
-    {
-        $username = $request->input('username');
-        $password = $request->input('password');
+{
+    $credentials = $request->only('username', 'password');
 
-        // Cek hardcode admin
-        if ($username === 'admin' && $password === 'admin') {
-            return redirect()->route('dashboard-admin')->with('success', 'Login successfully as Admin!');
-        }
-
-        // Cari user di database
-        $user = User::where('username', $username)->first();
-
-        if ($user && Hash::check($password, $user->password)) {
-            // Login manual
-            Auth::login($user);
-            return redirect()->route('dashboard-admin')->with('success', 'Login successfully!');
-        }
-
-        return redirect()->route('login')->with('error', 'Username or Password Incorrect!');
+    if ($credentials['username'] === 'admin' && $credentials['password'] === 'admin') {
+        // Hardcode admin, bisa langsung login manual
+        Auth::loginUsingId(1); // pastikan ada user dengan ID 1
+        return redirect()->route('dashboard-admin')->with('success', 'Login successfully as Admin!');
     }
+
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+        return redirect()->route('dashboard-admin')->with('success', 'Login successfully!');
+    }
+
+    return back()->with('error', 'Username atau password salah');
+}
 }

@@ -25,7 +25,10 @@ class FormDataController extends Controller
             'email'     => 'required|email',
             'phone'     => 'required',
             'instagram' => 'required',
-            'type'      => 'required',
+            'category'      => 'required',
+            'type_motorcycle'      => 'required',
+            'cost_estimation'      => 'required',
+            'link'      => 'required',
             'image'     => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -51,7 +54,10 @@ class FormDataController extends Controller
         $formData->email     = $validatedData['email'];
         $formData->phone     = $validatedData['phone'];
         $formData->instagram = $validatedData['instagram'];
-        $formData->type      = $validatedData['type'];
+        $formData->category      = $validatedData['category'];
+        $formData->type_motorcycle      = $validatedData['type_motorcycle'];
+        $formData->cost_estimation      = $validatedData['cost_estimation'];
+        $formData->link      = $validatedData['link'];
         $formData->image     = $imageName; // simpan nama file
         $formData->save();
 

@@ -17,7 +17,10 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('instagram');
-            $table->string('type');
+            $table->string('category');
+            $table->string('type_motorcycle');
+            $table->string('cost_estimation');
+            $table->string('link');
             $table->string('image');
             $table->timestamps();
         });

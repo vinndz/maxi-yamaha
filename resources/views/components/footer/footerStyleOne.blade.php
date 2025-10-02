@@ -2,7 +2,7 @@
 <section class="newsletter-one">
     <div class="container">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8943174593132!2d106.71673227499086!3d-6.277623193711227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb2b2ccb23a5%3A0x926ebc155da9bfdc!2sTranspark%20Mall%20Bintaro!5e0!3m2!1sid!2sid!4v1758524446983!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.843336069047!2d106.6342165751506!3d-6.284315061512895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb4030859dfb%3A0xbc8402640a0b831d!2sQBIG%20BSD%20City!5e0!3m2!1sid!2sid!4v1759292923930!5m2!1sid!2sid"
                 class="google-map__one" allowfullscreen>
             </iframe>
     </div>

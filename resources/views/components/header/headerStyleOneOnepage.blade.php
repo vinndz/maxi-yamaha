@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- css zeeba-responsive.css -->
 <header class="main-header">
     <nav class="main-menu">
         <div class="main-menu__wrapper">
@@ -20,9 +21,6 @@
                             </li>
                             <li class="scrollToLink">
                                 <a href="#type">Type</a>
-                            </li>
-                            <li class="scrollToLink">
-                                <a href="#last-event">Last Event</a>
                             </li>
                         </ul>
                     </div>

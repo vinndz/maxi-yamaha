@@ -1,6 +1,13 @@
 @extends('layouts.app') {{-- Pastikan kamu punya layout utama --}}
 
 @section('content')
+
+<style>
+    table.dataTable td {
+    white-space: nowrap;
+}
+
+</style>
 <div class="container mt-5">
     <h2 class="mb-4">Admin Dashboard</h2>
 
@@ -23,7 +30,10 @@
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Instagram</th>
-                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Motorcycle Type</th>
+                        <th>Cost Estimation</th>
+                        <th>Link</th>
                         <th>Photo</th>
                     </tr>
                 </thead>
@@ -75,7 +85,10 @@
                     { data: 'email' },
                     { data: 'phone' },
                     { data: 'instagram' },
-                    { data: 'type' },
+                    { data: 'category', className: 'nowrap' },
+                    { data: 'type_motorcycle', className: 'nowrap' },
+                    { data: 'cost_estimation' },
+                    { data: 'link' },
                     { 
                         data: 'image',
                         render: function(data, type, row, meta) {
@@ -100,12 +113,12 @@
                             window.location.href = '/export-pdf';
                         }
                     },
-                    {
-                        text: 'Print',
-                        action: function () {
-                            window.open('/print-data', '_blank');
-                        }
-                    }
+                    // {
+                    //     text: 'Print',
+                    //     action: function () {
+                    //         window.open('/print-data', '_blank');
+                    //     }
+                    // }
                 ]
             });
 

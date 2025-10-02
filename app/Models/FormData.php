@@ -13,7 +13,10 @@ class FormData extends Model
         'email',
         'phone',
         'instagram',
-        'type',
+        'category',
+        'type_motorcycle',
+        'cost_estimation',
+        'link',
         'image',
     ];
 

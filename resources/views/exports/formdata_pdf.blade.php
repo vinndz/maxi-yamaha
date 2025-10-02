@@ -39,7 +39,10 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Instagram</th>
-                <th>Type</th>
+                <th>Category</th>
+                <th>Motorcycle Type</th>
+                <th>Cost Estimation</th>
+                <th>Link</th>
                 <th>Gambar</th>
             </tr>
         </thead>
@@ -51,7 +54,10 @@
                     <td class="no-wrap text-center">{{ $item->email }}</td>
                     <td class="no-wrap text-center">{{ $item->phone }}</td>
                     <td class="no-wrap text-center">{{ $item->instagram }}</td>
-                    <td class="no-wrap text-center">{{ $item->type}}</td>
+                    <td class="no-wrap text-center">{{ $item->category}}</td>
+                    <td class="no-wrap text-center">{{ $item->type_motorcycle}}</td>
+                    <td class="no-wrap text-center">{{ $item->cost_estimation}}</td>
+                    <td class="no-wrap text-center">{{ $item->link}}</td>
                     <td class="no-wrap text-center">
                         @if($item->image)
                             <img src="{{ public_path('storage/images/'.$item->image) }}"  style="width:200px; height:200px; object-fit:cover;">
